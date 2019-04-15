@@ -9,10 +9,9 @@ namespace identityserver4POC.Domain.Entities {
                 return new List<Client> {
                     new Client {
                         ClientId = "oauthClient",
-                        ClientName = "Example Client Credentials Client Application",
+                        ClientName = "Haoni Arruda Hashimoto",
                         AllowedGrantTypes = GrantTypes.ClientCredentials,
-                        ClientSecrets = new List<Secret> {
-                            new Secret("superSecretPassword".Sha256())},                         
+                        ClientSecrets = new List<Secret> { new Secret("myPassword@2019".Sha256())},                         
                         AllowedScopes = new List<string> {"customAPI.read"}
                     }
                 };

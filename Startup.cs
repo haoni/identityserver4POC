@@ -12,7 +12,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using IdentityServer4.Models;
 using IdentityServer4.Test;
-// using identityserver4POC.Domain.Entities;
 
 namespace identityserver4POC
 {
@@ -58,3 +57,14 @@ namespace identityserver4POC
         }
     }
 }
+
+
+/* 
+Usar o Postman para fazer o teste:
+
+    POST /connect/token
+    Headers:
+    Content-Type: application/x-www-form-urlencoded
+    Body:
+    grant_type=client_credentials&scope=customAPI.read&client_id=oauthClient&client_secret=myPassword@2019
+ */
