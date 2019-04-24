@@ -44,11 +44,11 @@ namespace identityserver4POC
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+            // else
+            // {
+            //     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+            //     app.UseHsts();
+            // }
             
             app.UseIdentityServer();
             
@@ -60,11 +60,12 @@ namespace identityserver4POC
 
 
 /* 
+Navegue para: URL: http://localhost:5000/.well-known/openid-configuration
+
 Usar o Postman para fazer o teste:
 
     POST /connect/token
     Headers:
     Content-Type: application/x-www-form-urlencoded
-    Body:
-    grant_type=client_credentials&scope=customAPI.read&client_id=oauthClient&client_secret=myPassword@2019
+    Body: grant_type=client_credentials&scope=customAPI.read&client_id=oauthClient&client_secret=myPassword@2019
  */
